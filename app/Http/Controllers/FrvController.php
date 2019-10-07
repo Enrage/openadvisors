@@ -62,7 +62,7 @@ class FrvController extends Controller {
 
         $operation->file_path = 'http://' . $request->server('SERVER_NAME') . $file_path;
 
-        // Mail::to($operation->email)->send(new FrvProf($operation));
+        Mail::to($operation->email)->send(new FrvProf($operation));
 
         return json_encode($operation->email);
     }
