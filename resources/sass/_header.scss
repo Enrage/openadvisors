@@ -1,0 +1,362 @@
+#header {
+	position: relative;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	background: #dfd;
+	.container {
+		position: relative;
+		.top_menu {
+			display: flex;
+			width: 1170px;
+			margin: 0 auto;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 0;
+			position: relative;
+			.top_menu_btn {
+				display: none;
+				position: absolute;
+				top: 20px;
+				left: 0;
+				margin-left: 30px;
+				font-size: 30px;
+				cursor: pointer;
+				@media (max-width: 768px) {
+					display: block;
+				}
+			}
+			@media (max-width: 1220px) {
+				width: 960px;
+			}
+			@media (max-width: 991px) {
+				width: 720px;
+			}
+			@media (max-width: 768px) {
+				width: 100%;
+				min-height: 72px;
+			}
+			> ul {
+				display: flex;
+				position: relative;
+				justify-content: space-between;
+				flex-direction: row;
+				width: 100%;
+				z-index: 30;
+				&.b-show {
+					display: flex;
+					animation: showBlock .3s linear forwards;
+				}
+				&.b-hidden {
+					display: none;
+					animation: hideBlock .3s linear forwards;
+				}
+				@media (max-width: 768px) {
+					display: none;
+					width: auto;
+					flex-direction: column;
+					margin-left: 80px;
+				}
+				> li {
+					margin-left: 5px;
+					position: relative;
+					> a {
+						display: block;
+						padding: 6px 2px;
+						color: #0f7e22;
+						text-transform: uppercase;
+						text-decoration: none;
+						font: 400 18px $font;
+						transition: all .3s ease;
+						position: relative;
+						@media (max-width: 1220px) {
+							font-size: 16px;
+						}
+						@media (max-width: 991px) {
+							font-size: 14px;
+						}
+						@media (max-width: 768px) {
+							font-size: 18px;
+							padding-top: 12px;
+							padding-bottom: 12px;
+						}
+						&:hover {
+							color: orange;
+							&::after {
+								transform: scaleX(1);
+							}
+						}
+						&::after {
+							display: block;
+							content: '';
+							border-bottom: 2px solid orange;
+							transform: scaleX(0);
+							transition: transform 200ms ease-in-out;
+							@media (max-width: 768px) {
+								display: none;
+							}
+						}
+					}
+					&.active {
+						> a {
+							color: orange;
+							&::after {
+								transform: scaleX(1);
+							}
+						}
+					}
+
+					> ul {
+						position: absolute;
+						display: none;
+						@media (max-width: 768px) {
+							display: flex;
+							flex-direction: column;
+							position: relative;
+						}
+						> li {
+							background: #dfd;
+							@media (max-width: 768px) {
+								margin-left: 10px;
+							}
+							> a {
+								color: #0f7e22;
+								white-space: nowrap;
+								display: block;
+								font: 400 18px $font;
+								transition: all .3s ease;
+								text-decoration: none;
+								text-transform: uppercase;
+								padding: 10px 12px 12px;
+								@media (max-width: 1220px) {
+									font-size: 16px;
+								}
+								@media (max-width: 991px) {
+									font-size: 14px;
+								}
+								@media (max-width: 768px) {
+									font-size: 18px;
+									padding-top: 12px;
+									padding-bottom: 12px;
+								}
+								&:hover {
+									color: darkorange;
+								}
+							}
+							&:first-child > a {
+								padding-top: 25px;
+								@media (max-width: 768px) {
+									padding-top: 12px;
+								}
+							}
+						}
+					}
+
+					&:hover {
+						> ul {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.logo {
+		padding: 15px 0;
+		a {
+			display: block;
+			width: 350px;
+			@media (max-width: 1220px) {
+				width: 310px;
+			}
+			@media (max-width: 991px) {
+				width: 260px;
+			}
+			@media (max-width: 768px) {
+				margin-left: 30px;
+			}
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		@media (max-width: 768px) {
+			display: none;
+		}
+		> div {
+			color: orange;
+			font: 400 22px $font;
+			@media (max-width: 1220px) {
+				font-size: 20px;
+			}
+			@media (max-width: 991px) {
+				font-size: 16px;
+			}
+			&.email > a {
+				color: orange;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.reg_block {
+		position: relative;
+		width: 100%;
+		background: #222;
+
+		.container {
+			width: 1170px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			@media (max-width: 1220px) {
+				width: 960px;
+			}
+			@media (max-width: 991px) {
+				width: 720px;
+			}
+			@media (max-width: 768px) {
+				width: 100%;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+			.search_auth_block {
+				position: relative;
+				height: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				justify-content: center;
+				padding-top: 20px;
+				@media (max-width: 768px) {
+					margin-left: 30px;
+					padding-bottom: 25px;
+					padding-top: 10px;
+				}
+				.account_name {
+					font: 400 20px $font;
+					color: #fff;
+					@media (max-width: 1220px) {
+						font-size: 18px;
+					}
+					@media (max-width: 991px) {
+						font-size: 16px;
+					}
+					@media (max-width: 768px) {
+						font-size: 20px;
+					}
+				}
+
+				.profile_link {
+					color: orange;
+					font: 400 20px $font;
+					text-decoration: none;
+					@media (max-width: 1220px) {
+						font-size: 18px;
+					}
+					@media (max-width: 991px) {
+						font-size: 16px;
+					}
+					@media (max-width: 768px) {
+						font-size: 20px;
+					}
+				}
+				.logout {
+					color: #fff;
+					text-decoration: none;
+					font: 400 16px $font;
+					margin-left: 10px;
+					@media (max-width: 1220px) {
+						font-size: 15px;
+					}
+					@media (max-width: 991px) {
+						font-size: 14px;
+					}
+					@media (max-width: 768px) {
+						font-size: 16px;
+					}
+				}
+			}
+			.search {
+				position: relative;
+				margin-bottom: 20px;
+
+				#search {
+					width: 270px;
+					height: 35px;
+					padding: 0 38px 0 10px;
+					color: #333;
+					font: 400 16px $font;
+					box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.3);
+				}
+				#submit_search {
+					position: absolute;
+					right: 5px;
+					top: 5px;
+					cursor: pointer;
+					width: 19px;
+					background: transparent;
+					height: 22px;
+					z-index: 5;
+					&:active, &:hover {
+						background: transparent;
+					}
+				}
+				.fa-search {
+					position: absolute;
+					right: 5px;
+					top: 5px;
+					font-size: 22px;
+					cursor: pointer;
+					background: #fff;
+					z-index: 1;
+				}
+			}
+
+			.auth {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				.login {
+					color: #fff;
+					text-decoration: none;
+					border: 1px solid #fff;
+					display: block;
+					padding: 6px 11px;
+					text-align: center;
+					font: 400 17px $font;
+					transition: all .3s ease;
+					&:hover {
+						background: #fff;
+						color: #333;
+					}
+				}
+				.register {
+					color: #fff;
+					text-decoration: none;
+					font: 400 17px $font;
+					margin-left: 21px;
+					transition: all .3s ease;
+					display: block;
+					padding: 6px 11px;
+
+					color: darkorange;
+					border: 1px solid darkorange;
+					&:hover {
+						background: darkorange;
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

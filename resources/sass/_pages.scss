@@ -1,0 +1,218 @@
+.page_content {
+	padding: 15px;
+	h2 {
+		font: 600 25px $font;
+		color: green;
+		margin-bottom: 40px;
+	}
+
+	h3 {
+		font: 600 22px $font;
+		color: #333;
+		margin-bottom: 15px;
+		margin-top: 25px;
+	}
+
+	p {
+		font: 400 20px $font;
+		color: #333;
+		margin-bottom: 10px;
+	}
+	a {
+		color: green;
+		text-decoration: none;
+		font: 400 20px $font;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.team_member {
+		margin-top: 40px;
+		h3 {
+			font: 600 22px $font;
+			color: darkorange;
+			margin-bottom: 15px;
+			+ p {
+				font: 600 20px $font;
+				color: #333;
+				margin-bottom: 30px;
+			}
+		}
+		> div {
+			display: flex;
+			align-items: flex-start;
+			img {
+				margin-right: 20px;
+			}
+			.text_about {
+				font: 400 18px $font;
+				color: #333;
+				p {
+					margin-bottom: 10px;
+				}
+			}
+		}
+	}
+
+	.our_client {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-start;
+		> div {
+			flex: 0 0 18%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 30px 0;
+		}
+	}
+
+	.links {
+		margin-top: 25px;
+		> li {
+			list-style-position: inside;
+			list-style-type: disc;
+			margin: 15px 0;
+		}
+	}
+
+	.services_list ul {
+		list-style-type: circle;
+		list-style-position: inside;
+		> li {
+			margin: 15px 0;
+			> a {
+				color: green;
+				font: 400 20px $font;
+				transition: all .3s ease;
+				&:hover {
+					color: orange;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	#reviews {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 50px;
+		a {
+			width: 210px;
+			height: 100%;
+			display: block;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			font-size: 0;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.our_partner {
+		display: flex;
+		justify-content: space-between;
+		> a {
+			display: flex;
+			width: 210px;
+			font-size: 0;
+			align-items: center;
+			justify-content: center;
+			> img {
+				width: 100%;
+			}
+		}
+  }
+
+  .contact_block {
+    display: flex;
+    justify-content: space-between;
+	}
+
+	.decision {
+		padding-bottom: 180px;
+		a {
+			display: block;
+			margin: 10px 0;
+		}
+	}
+
+	.recommendation {
+		padding-bottom: 190px;
+	}
+
+	.our_software {
+		.soft {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 60px;
+			.soft_block {
+				position: relative;
+				.software_img {
+					width: 180px;
+					margin-right: 50px;
+					a {
+						display: block;
+						width: 100%;
+					}
+					img {
+						width: 100%;
+						cursor: pointer;
+					}
+				}
+				.about_frv {
+					display: none;
+					position: absolute;
+					top: 90px;
+					left: 0;
+					width: 1140px;
+					padding: 25px;
+					background: #f0fff0;
+					box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+					border: 1px solid #ccc;
+					z-index: 100;
+					&.b-show {
+						display: block;
+						animation: showBlock .3s linear forwards;
+					}
+					&.b-hidden {
+						display: none;
+						animation: hideBlock .3s linear forwards;
+					}
+				}
+			}
+
+			.soft_about {
+				p {
+					font: 400 20px $font;
+					color: #333;
+				}
+				&.get_ready {
+					padding-right: 100px;
+				}
+			}
+
+			.soft_download {
+				display: flex;
+				flex-direction: column;
+				margin-left: 30px;
+				a {
+					white-space: nowrap;
+					display: block;
+					margin: 6px 0;
+					text-decoration: none;
+					transition: all .3s ease;
+					color: green;
+					&:hover {
+						color: orange;
+					}
+				}
+			}
+		}
+	}
+}

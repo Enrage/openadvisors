@@ -1,0 +1,51 @@
+// font-weight helper:
+
+// 100 Extra Light or Ultra Light;
+// 200 Light or Thin; 300 Book or Demi;
+// 400 Regular or Normal;
+// 500 Medium;
+// 600 Semibold or Demibold;
+// 700 Bold;
+// 800 Black or Extra Bold or Heavy;
+// 900 Extra Black or Fat or Ultra Black
+
+
+@mixin font($f-name, $f-style, $f-weight, $f-url, $f-format) {
+	@font-face {
+		font-family: $f-name;
+		font-style: $f-style;
+		font-weight: $f-weight;
+		src: url($f-url) format($f-format);
+	}
+}
+
+
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro/sourcesanspro-light.woff2', 'woff2');
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro/sourcesanspro-light.woff', 'woff');
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro/sourcesanspro-light.svg', 'svg');
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro/sourcesanspro-light.eot', 'eot');
+@include font('Source Sans Pro', normal, 300, '../fonts/SourceSansPro/sourcesanspro-light.ttf', 'truetype');
+
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro/sourcesanspro-regular.woff2', 'woff2');
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro/sourcesanspro-regular.woff', 'woff');
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro/sourcesanspro-regular.svg', 'svg');
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro/sourcesanspro-regular.eot', 'eot');
+@include font('Source Sans Pro', normal, 400, '../fonts/SourceSansPro/sourcesanspro-regular.ttf', 'truetype');
+
+@include font('Source Sans Pro', italic, 400, '../fonts/SourceSansPro/sourcesanspro-italic.woff2', 'woff2');
+@include font('Source Sans Pro', italic, 400, '../fonts/SourceSansPro/sourcesanspro-italic.woff', 'woff');
+@include font('Source Sans Pro', italic, 400, '../fonts/SourceSansPro/sourcesanspro-italic.svg', 'svg');
+@include font('Source Sans Pro', italic, 400, '../fonts/SourceSansPro/sourcesanspro-italic.eot', 'eot');
+@include font('Source Sans Pro', italic, 400, '../fonts/SourceSansPro/sourcesanspro-italic.ttf', 'truetype');
+
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro/sourcesanspro-semibold.woff2', 'woff2');
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro/sourcesanspro-semibold.woff', 'woff');
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro/sourcesanspro-semibold.svg', 'svg');
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro/sourcesanspro-semibold.eot', 'eot');
+@include font('Source Sans Pro', normal, 600, '../fonts/SourceSansPro/sourcesanspro-semibold.ttf', 'truetype');
+
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro/sourcesanspro-bold.woff2', 'woff2');
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro/sourcesanspro-bold.woff', 'woff');
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro/sourcesanspro-bold.svg', 'svg');
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro/sourcesanspro-bold.eot', 'eot');
+@include font('Source Sans Pro', normal, 700, '../fonts/SourceSansPro/sourcesanspro-bold.ttf', 'truetype');

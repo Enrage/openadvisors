@@ -1,0 +1,83 @@
+.profile_content {
+	padding: 15px;
+
+	h2 {
+		font: 600 25px $font;
+		color: green;
+	}
+
+	.software_block {
+		margin: 50px 0 20px;
+		.link {
+			font: 400 18px $font;
+      color: green;
+      text-decoration: none;
+      transition: all .3s ease;
+      &:hover {
+        color: orange;
+      }
+		}
+  }
+
+  .profile_settings {
+    a {
+      color: green;
+      text-decoration: none;
+      font: 400 18px $font;
+    }
+  }
+
+  .profile {
+    padding: 20px 0;
+    > div {
+      margin: 20px 0;
+      font: 400 20px $font;
+      color: #333;
+      > span {
+        font-weight: 600;
+        margin-left: 10px;
+      }
+      > a {
+        font: 400 15px $font;
+        color: green;
+      }
+    }
+  }
+
+  .profile_title {
+    font: 600 22px $font;
+    margin: 30px 0;
+  }
+
+  .edit_profile {
+    margin-top: 50px;
+    .edit_profile_form {
+      display: flex;
+      flex-direction: column;
+
+      input[type=text], input[type=phone], input[type=email] {
+        border: 1px solid #ccc;
+        width: 320px;
+        height: 40px;
+        padding: 10px;
+        margin: 10px 0 20px;
+        font: 400 18px $font;
+        color: #333;
+      }
+      #save_profile {
+        width: 200px;
+        height: 40px;
+        background: darkorange;
+        transition: all .3s ease;
+        color: #fff;
+        font: 400 20px $font;
+        line-height: 40px;
+        margin-top: 30px;
+        cursor: pointer;
+        &:hover {
+          background: orange;
+        }
+      }
+    }
+  }
+}
